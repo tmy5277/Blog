@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>beyond网站模板练习</title>
+    <link rel="stylesheet" href="assets/css/test.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body>
+<!-- 导航 -->
+<div class="page-sidebar">
+    <ul class="nav panel-group sidebar-menu" id="nav_parent">
+        <li class="panel">
+            <a href="#">
+                <i class="menu-icon glyphicon glyphicon-home"></i>
+                <span class="menu-text"> Dashboard </span>
+            </a>
+        </li>
+        <li class="panel">
+            <a class="panel-heading collapsed" href="#collapse1" data-toggle="collapse" data-parent="#nav_parent">
+                <i class="menu-icon glyphicon glyphicon-fire"></i>
+                <span class="menu-text">Elements</span>
+                <i class="glyphicon glyphicon-chevron-right menu-expand"></i>
+            </a>
+            <ul class="nav submenu collapse" id="collapse1">
+                <li>
+                    <a href="#"><span class="menu-text">Basic Elements</span></a>
+                </li>
+                <li>
+                    <a class="panel-heading collapsed" href="#collapse2" data-toggle="collapse">
+                        <span class="menu-text">Icons</span>
+                        <i class="glyphicon glyphicon-chevron-right menu-expand"></i>
+                    </a>
+                    <ul class="nav submenu collapse" id="collapse2">
+                        <li>
+                            <a href="#">
+                                <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                <span class="menu-text">Font Awesome</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                <span class="menu-text">Glyph Icons</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-text">Tabs &amp; Accordions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-text">Alerts &amp; Tooltips</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-text">Modals &amp; Wells</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="panel-heading collapsed" href="#collapse5" data-toggle="collapse" data-parent="#nav_parent">
+                <i class="menu-icon glyphicon glyphicon-link"></i>
+                <span class="menu-text">More Pages</span>
+                <i class="glyphicon glyphicon-chevron-right menu-expand"></i>
+            </a>
+            <ul class="nav submenu collapse" id="collapse5">
+                <li>
+                    <a href="#"><span class="menu-text">Error 404</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-text"> Grid</span></a>
+                </li>
+                <li>
+                    <a class="panel-heading collapsed" href="#collapse6" data-toggle="collapse">
+                        <span class="menu-text">Multi Level Menu</span>
+                        <i class="glyphicon glyphicon-chevron-right menu-expand"></i>
+                    </a>
+                    <ul class="nav submenu collapse" id="collapse6">
+                        <li>
+                            <a href="#">
+                                <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                <span class="menu-text">Level 3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="panel-heading collapsed" href="#collapse7" data-toggle="collapse">
+                                <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                <span class="menu-text">Level 4</span>
+                                <i class="glyphicon glyphicon-chevron-right menu-expand"></i>
+                            </a>
+                            <ul class="nav submenu collapse" id="collapse7">
+                                <li>
+                                    <a href="#">
+                                        <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                        <span class="menu-text">Some Item</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                        <span class="menu-text">Another Item</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        //点击菜单箭头变化
+        $(".page-sidebar .sidebar-menu a").each(function(){
+            $(this).click(function(){
+                var Oele = $(this).children('.menu-expand');
+                if($(Oele)){
+                    if($(Oele).hasClass('glyphicon-chevron-right')){
+                        $(Oele).removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
+                    }else{
+                        $(Oele).removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
+                    }
+                }
+
+                //选中增加active
+                if(! $(this).hasClass('panel-heading')){
+                    $(".page-sidebar .sidebar-menu a").removeClass('active');
+                    $(this).addClass('active');
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>
