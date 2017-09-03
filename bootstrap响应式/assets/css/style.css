@@ -79,9 +79,9 @@ body{
     font-size: 18px;
 }
 #jumbotron1{
-    background-image: url("/assets/img/jumbotron.jpg");
+    background-image: url("../img/jumbotron.jpg");
     margin:50px 0 0 0;
-    color: #666;
+    color: #eee;
 }
 .jumbotron h1{
     font-size: 26px;
@@ -133,6 +133,39 @@ body{
     color: #333;
     padding-top: 2px;
 }
+#case{
+    padding: 40px 0;
+    background-color: #eee;
+}
+#case h4{
+    color: #666;
+}
+#case p{
+    color: #666;
+    line-height: 1.6;
+}
+#about{
+    padding: 40px 15px;
+    background-color: #eee;
+}
+#about a{
+     color: #0059B2;
+ }
+#about .about{
+    background-color: #ffffff;
+    box-shadow: 2px 2px 3px #ccc;
+}
+#about h3{
+    color: #333;
+    font-size: 18px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 0;
+    margin: 0 0 10px 0;
+}
+#about p{
+    line-height: 2;
+    font-size:13px;
+}
 
 /*小屏幕*/
 @media (min-width: 768px) {
@@ -167,6 +200,12 @@ body{
         white-space: nowrap;
         text-overflow: ellipsis;
     }
+    #about h3{
+        font-size: 19px;
+    }
+    #about p{
+        font-size: 14px;
+    }
 }
 
 /*中等屏幕*/
@@ -193,6 +232,12 @@ body{
     {
         font-size: 18px;
     }
+    #about h3{
+        font-size: 20px;
+    }
+    #about p{
+        font-size: 15px;
+    }
 }
 
 /*大屏幕*/
@@ -212,6 +257,12 @@ body{
     .info-content h4
     {
         font-size: 20px;
+    }
+    #about h3{
+        font-size: 22px;
+    }
+    #about p{
+        font-size: 16px;
     }
 }
 
