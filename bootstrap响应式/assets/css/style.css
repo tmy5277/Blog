@@ -3,6 +3,9 @@ body{
     font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
     color: #666;
 }
+.navbar{
+    height: 50px;
+}
 #myCarousel{
     margin-top: 50px;
 }
@@ -112,6 +115,24 @@ body{
 {
     line-height: 1.6;
 }
+.info-right{
+    background-color: #fff;
+    box-shadow: 2px 2px 3px #ccc;
+}
+.info-right blockquote{
+    margin: 0;
+    padding: 0;
+}
+.info-right h2{
+    font-size:20px;
+    color: #333;
+    padding: 5px;
+}
+.info-right h4{
+    font-size:16px;
+    color: #333;
+    padding-top: 2px;
+}
 
 /*小屏幕*/
 @media (min-width: 768px) {
@@ -142,6 +163,9 @@ body{
     .info-content h4
     {
         font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 
