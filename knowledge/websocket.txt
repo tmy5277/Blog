@@ -23,13 +23,9 @@ socket.onopen = function(event) {
 
 
 
-
+socket.io.js:
 <script src="http://cdn.socket.io/stable/socket.io.js"></script>
-[/code
 
-此时，Socket.IO在此页面上是有效的，是时候创建Socket了：
-
-[code]
 // 创建Socket.IO实例，建立连接
 var socket= new io.Socket('localhost',{ 
   port: 8080 
