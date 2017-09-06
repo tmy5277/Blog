@@ -5,5 +5,9 @@ web
 与网站实例
 
 
-其中 
-knowledge 中是学习过程中遇到的知识重难点
+ 
+knowledge ：学习过程中遇到的知识重难点
+
+demo ： 一些知识点相关的例子
+
+done  ： 敲过一遍的demo
