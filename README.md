@@ -10,4 +10,4 @@ knowledge ：学习过程中遇到的知识重难点
 
 demo ： 一些知识点相关的例子
 
-done  ： 敲过一遍的demo
+done  ： 敲过的demo
