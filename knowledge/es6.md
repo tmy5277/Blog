@@ -1,4 +1,4 @@
-###阮一峰ES6权威指南（http://es6.ruanyifeng.com/）
+#阮一峰ES6权威指南——（http://es6.ruanyifeng.com/）
 
 ECMAScript 6 目前基本成为业界标准，它的普及速度比 ES5 要快很多，主要原因是现代浏览器对 ES6 的支持相当迅速，尤其是 Chrome 和 Firefox 浏览器，已经支持 ES6 中绝大多数的特性。
 
