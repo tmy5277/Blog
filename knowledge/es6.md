@@ -1,35 +1,37 @@
-ECMAScript 6 Ä¿Ç°»ù±¾³ÉÎªÒµ½ç±ê×¼£¬ËüµÄÆÕ¼°ËÙ¶È±È ES5 Òª¿ìºÜ¶à£¬Ö÷ÒªÔ­ÒòÊÇÏÖ´úä¯ÀÀÆ÷¶Ô ES6 µÄÖ§³ÖÏàµ±Ñ¸ËÙ£¬ÓÈÆäÊÇ Chrome ºÍ Firefox ä¯ÀÀÆ÷£¬ÒÑ¾­Ö§³Ö ES6 ÖÐ¾ø´ó¶àÊýµÄÌØÐÔ¡£
+###é˜®ä¸€å³°ES6æƒå¨æŒ‡å—ï¼ˆhttp://es6.ruanyifeng.com/ï¼‰
+
+ECMAScript 6 ç›®å‰åŸºæœ¬æˆä¸ºä¸šç•Œæ ‡å‡†ï¼Œå®ƒçš„æ™®åŠé€Ÿåº¦æ¯” ES5 è¦å¿«å¾ˆå¤šï¼Œä¸»è¦åŽŸå› æ˜¯çŽ°ä»£æµè§ˆå™¨å¯¹ ES6 çš„æ”¯æŒç›¸å½“è¿…é€Ÿï¼Œå°¤å…¶æ˜¯ Chrome å’Œ Firefox æµè§ˆå™¨ï¼Œå·²ç»æ”¯æŒ ES6 ä¸­ç»å¤§å¤šæ•°çš„ç‰¹æ€§ã€‚
 
 
-1. let¡¢const ºÍ block ×÷ÓÃÓò
-let ÔÊÐí´´½¨¿é¼¶×÷ÓÃÓò£¬ES6 ÍÆ¼öÔÚº¯ÊýÖÐÊ¹ÓÃ let ¶¨Òå±äÁ¿£¬¶ø·Ç var£º
+1. letã€const å’Œ block ä½œç”¨åŸŸ
+let å…è®¸åˆ›å»ºå—çº§ä½œç”¨åŸŸï¼ŒES6 æŽ¨èåœ¨å‡½æ•°ä¸­ä½¿ç”¨ let å®šä¹‰å˜é‡ï¼Œè€Œéž varï¼š
 var a = 2;
 {
   let a = 3;
   console.log(a); // 3
 }
 console.log(a); // 2
-Í¬ÑùÔÚ¿é¼¶×÷ÓÃÓòÓÐÐ§µÄÁíÒ»¸ö±äÁ¿ÉùÃ÷·½Ê½ÊÇ const£¬Ëü¿ÉÒÔÉùÃ÷Ò»¸ö³£Á¿¡£ES6 ÖÐ£¬const ÉùÃ÷µÄ³£Á¿ÀàËÆÓÚÖ¸Õë£¬ËüÖ¸ÏòÄ³¸öÒýÓÃ£¬Ò²¾ÍÊÇËµÕâ¸ö¡¸³£Á¿¡¹²¢·ÇÒ»³É²»±äµÄ£¬Èç£º
+åŒæ ·åœ¨å—çº§ä½œç”¨åŸŸæœ‰æ•ˆçš„å¦ä¸€ä¸ªå˜é‡å£°æ˜Žæ–¹å¼æ˜¯ constï¼Œå®ƒå¯ä»¥å£°æ˜Žä¸€ä¸ªå¸¸é‡ã€‚ES6 ä¸­ï¼Œconst å£°æ˜Žçš„å¸¸é‡ç±»ä¼¼äºŽæŒ‡é’ˆï¼Œå®ƒæŒ‡å‘æŸä¸ªå¼•ç”¨ï¼Œä¹Ÿå°±æ˜¯è¯´è¿™ä¸ªã€Œå¸¸é‡ã€å¹¶éžä¸€æˆä¸å˜çš„ï¼Œå¦‚ï¼š
 {
   const ARR = [5,6];
   ARR.push(7);
   console.log(ARR); // [5,6,7]
   ARR = 10; // TypeError
 }
-ÓÐ¼¸¸öµãÐèÒª×¢Òâ£º
-let ¹Ø¼ü´ÊÉùÃ÷µÄ±äÁ¿²»¾ß±¸±äÁ¿ÌáÉý£¨hoisting£©ÌØÐÔ
-let ºÍ const ÉùÃ÷Ö»ÔÚ×î¿¿½üµÄÒ»¸ö¿éÖÐ£¨»¨À¨ºÅÄÚ£©ÓÐÐ§
-µ±Ê¹ÓÃ³£Á¿ const ÉùÃ÷Ê±£¬ÇëÊ¹ÓÃ´óÐ´±äÁ¿£¬Èç£ºCAPITAL_CASING
-const ÔÚÉùÃ÷Ê±±ØÐë±»¸³Öµ
-2. ¼ýÍ·º¯Êý£¨Arrow Functions£©
-ES6 ÖÐ£¬¼ýÍ·º¯Êý¾ÍÊÇº¯ÊýµÄÒ»ÖÖ¼òÐ´ÐÎÊ½£¬Ê¹ÓÃÀ¨ºÅ°ü¹ü²ÎÊý£¬¸úËæÒ»¸ö =>£¬½ô½Ó×ÅÊÇº¯ÊýÌå£º
+æœ‰å‡ ä¸ªç‚¹éœ€è¦æ³¨æ„ï¼š
+let å…³é”®è¯å£°æ˜Žçš„å˜é‡ä¸å…·å¤‡å˜é‡æå‡ï¼ˆhoistingï¼‰ç‰¹æ€§
+let å’Œ const å£°æ˜Žåªåœ¨æœ€é è¿‘çš„ä¸€ä¸ªå—ä¸­ï¼ˆèŠ±æ‹¬å·å†…ï¼‰æœ‰æ•ˆ
+å½“ä½¿ç”¨å¸¸é‡ const å£°æ˜Žæ—¶ï¼Œè¯·ä½¿ç”¨å¤§å†™å˜é‡ï¼Œå¦‚ï¼šCAPITAL_CASING
+const åœ¨å£°æ˜Žæ—¶å¿…é¡»è¢«èµ‹å€¼
+2. ç®­å¤´å‡½æ•°ï¼ˆArrow Functionsï¼‰
+ES6 ä¸­ï¼Œç®­å¤´å‡½æ•°å°±æ˜¯å‡½æ•°çš„ä¸€ç§ç®€å†™å½¢å¼ï¼Œä½¿ç”¨æ‹¬å·åŒ…è£¹å‚æ•°ï¼Œè·Ÿéšä¸€ä¸ª =>ï¼Œç´§æŽ¥ç€æ˜¯å‡½æ•°ä½“ï¼š
 var getPrice = function() {
   return 4.55;
 };
  
 // Implementation with Arrow Function
 var getPrice = () => 4.55;
-ÐèÒª×¢ÒâµÄÊÇ£¬ÉÏÃæÀõ×ÓÖÐµÄ getPrice ¼ýÍ·º¯Êý²ÉÓÃÁË¼ò½àº¯ÊýÌå£¬Ëü²»ÐèÒª reture Óï¾ä£¬ÏÂÃæÕâ¸öÀõ×ÓÊ¹ÓÃµÄÊÇÕý³£º¯ÊýÌå£º
+éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œä¸Šé¢æ —å­ä¸­çš„ getPrice ç®­å¤´å‡½æ•°é‡‡ç”¨äº†ç®€æ´å‡½æ•°ä½“ï¼Œå®ƒä¸éœ€è¦ reture è¯­å¥ï¼Œä¸‹é¢è¿™ä¸ªæ —å­ä½¿ç”¨çš„æ˜¯æ­£å¸¸å‡½æ•°ä½“ï¼š
 let arr = ['apple', 'banana', 'orange'];
  
 let breakfast = arr.map(fruit => {
@@ -37,17 +39,17 @@ let breakfast = arr.map(fruit => {
 });
  
 console.log(breakfast); // apples bananas oranges
-µ±È»£¬¼ýÍ·º¯Êý²»½ö½öÊÇÈÃ´úÂë±äµÃ¼ò½à£¬º¯ÊýÖÐ this ×ÜÊÇ°ó¶¨×ÜÊÇÖ¸Ïò¶ÔÏó×ÔÉí¡£¾ßÌå¿ÉÒÔ¿´¿´ÏÂÃæ¼¸¸öÀõ×Ó£º
+å½“ç„¶ï¼Œç®­å¤´å‡½æ•°ä¸ä»…ä»…æ˜¯è®©ä»£ç å˜å¾—ç®€æ´ï¼Œå‡½æ•°ä¸­ this æ€»æ˜¯ç»‘å®šæ€»æ˜¯æŒ‡å‘å¯¹è±¡è‡ªèº«ã€‚å…·ä½“å¯ä»¥çœ‹çœ‹ä¸‹é¢å‡ ä¸ªæ —å­ï¼š
 function Person() {
   this.age = 0;
  
   setInterval(function growUp() {
-    // ÔÚ·ÇÑÏ¸ñÄ£Ê½ÏÂ£¬growUp() º¯ÊýµÄ this Ö¸Ïò window ¶ÔÏó
+    // åœ¨éžä¸¥æ ¼æ¨¡å¼ä¸‹ï¼ŒgrowUp() å‡½æ•°çš„ this æŒ‡å‘ window å¯¹è±¡
     this.age++;
   }, 1000);
 }
 var person = new Person();
-ÎÒÃÇ¾­³£ÐèÒªÊ¹ÓÃÒ»¸ö±äÁ¿À´±£´æ this£¬È»ºóÔÚ growUp º¯ÊýÖÐÒýÓÃ£º
+æˆ‘ä»¬ç»å¸¸éœ€è¦ä½¿ç”¨ä¸€ä¸ªå˜é‡æ¥ä¿å­˜ thisï¼Œç„¶åŽåœ¨ growUp å‡½æ•°ä¸­å¼•ç”¨ï¼š
 function Person() {
   var self = this;
   self.age = 0;
@@ -56,48 +58,48 @@ function Person() {
     self.age++;
   }, 1000);
 }
-¶øÊ¹ÓÃ¼ýÍ·º¯Êý¿ÉÒÔÊ¡È´Õâ¸öÂé·³£º
+è€Œä½¿ç”¨ç®­å¤´å‡½æ•°å¯ä»¥çœå´è¿™ä¸ªéº»çƒ¦ï¼š
 function Person(){
   this.age = 0;
  
   setInterval(() => {
-    // |this| Ö¸Ïò person ¶ÔÏó
+    // |this| æŒ‡å‘ person å¯¹è±¡
     this.age++;
   }, 1000);
 }
  
 var person = new Person();
-3. º¯Êý²ÎÊýÄ¬ÈÏÖµ
-ES6 ÖÐÔÊÐíÄã¶Ôº¯Êý²ÎÊýÉèÖÃÄ¬ÈÏÖµ£º
+3. å‡½æ•°å‚æ•°é»˜è®¤å€¼
+ES6 ä¸­å…è®¸ä½ å¯¹å‡½æ•°å‚æ•°è®¾ç½®é»˜è®¤å€¼ï¼š
 let getFinalPrice = (price, tax=0.7) => price + price * tax;
 getFinalPrice(500); // 850
-4. Spread / Rest ²Ù×÷·û
-Spread / Rest ²Ù×÷·ûÖ¸µÄÊÇ ...£¬¾ßÌåÊÇ Spread »¹ÊÇ Rest ÐèÒª¿´ÉÏÏÂÎÄÓï¾³¡£
-µ±±»ÓÃÓÚµü´úÆ÷ÖÐÊ±£¬ËüÊÇÒ»¸ö Spread ²Ù×÷·û£º
+4. Spread / Rest æ“ä½œç¬¦
+Spread / Rest æ“ä½œç¬¦æŒ‡çš„æ˜¯ ...ï¼Œå…·ä½“æ˜¯ Spread è¿˜æ˜¯ Rest éœ€è¦çœ‹ä¸Šä¸‹æ–‡è¯­å¢ƒã€‚
+å½“è¢«ç”¨äºŽè¿­ä»£å™¨ä¸­æ—¶ï¼Œå®ƒæ˜¯ä¸€ä¸ª Spread æ“ä½œç¬¦ï¼š
 function foo(x,y,z) {
   console.log(x,y,z);
 }
  
 let arr = [1,2,3];
 foo(...arr); // 1 2 3
-µ±±»ÓÃÓÚº¯Êý´«²ÎÊ±£¬ÊÇÒ»¸ö Rest ²Ù×÷·û£º
+å½“è¢«ç”¨äºŽå‡½æ•°ä¼ å‚æ—¶ï¼Œæ˜¯ä¸€ä¸ª Rest æ“ä½œç¬¦ï¼š
 function foo(...args) {
   console.log(args);
 }
 foo( 1, 2, 3, 4, 5); // [1, 2, 3, 4, 5]
-5. ¶ÔÏó´Ê·¨À©Õ¹
-ES6 ÔÊÐíÉùÃ÷ÔÚ¶ÔÏó×ÖÃæÁ¿Ê±Ê¹ÓÃ¼òÐ´Óï·¨£¬À´³õÊ¼»¯ÊôÐÔ±äÁ¿ºÍº¯ÊýµÄ¶¨Òå·½·¨£¬²¢ÇÒÔÊÐíÔÚ¶ÔÏóÊôÐÔÖÐ½øÐÐ¼ÆËã²Ù×÷£º
+5. å¯¹è±¡è¯æ³•æ‰©å±•
+ES6 å…è®¸å£°æ˜Žåœ¨å¯¹è±¡å­—é¢é‡æ—¶ä½¿ç”¨ç®€å†™è¯­æ³•ï¼Œæ¥åˆå§‹åŒ–å±žæ€§å˜é‡å’Œå‡½æ•°çš„å®šä¹‰æ–¹æ³•ï¼Œå¹¶ä¸”å…è®¸åœ¨å¯¹è±¡å±žæ€§ä¸­è¿›è¡Œè®¡ç®—æ“ä½œï¼š
 function getCar(make, model, value) {
   return {
-    // ¼òÐ´±äÁ¿
-    make,  // µÈÍ¬ÓÚ make: make
-    model, // µÈÍ¬ÓÚ model: model
-    value, // µÈÍ¬ÓÚ value: value
+    // ç®€å†™å˜é‡
+    make,  // ç­‰åŒäºŽ make: make
+    model, // ç­‰åŒäºŽ model: model
+    value, // ç­‰åŒäºŽ value: value
  
-    // ÊôÐÔ¿ÉÒÔÊ¹ÓÃ±í´ïÊ½¼ÆËãÖµ
+    // å±žæ€§å¯ä»¥ä½¿ç”¨è¡¨è¾¾å¼è®¡ç®—å€¼
     ['make' + make]: true,
  
-    // ºöÂÔ `function` ¹Ø¼ü´Ê¼òÐ´¶ÔÏóº¯Êý
+    // å¿½ç•¥ `function` å…³é”®è¯ç®€å†™å¯¹è±¡å‡½æ•°
     depreciate() {
       this.value -= 2500;
     }
@@ -113,15 +115,15 @@ let car = getCar('Barret', 'Lee', 40000);
 //     makeKia: true,
 //     depreciate: function()
 // }
-6. ¶þ½øÖÆºÍ°Ë½øÖÆ×ÖÃæÁ¿
-ES6 Ö§³Ö¶þ½øÖÆºÍ°Ë½øÖÆµÄ×ÖÃæÁ¿£¬Í¨¹ýÔÚÊý×ÖÇ°ÃæÌí¼Ó 0o »òÕß0O ¼´¿É½«Æä×ª»»Îª¶þ½øÖÆÖµ£º
+6. äºŒè¿›åˆ¶å’Œå…«è¿›åˆ¶å­—é¢é‡
+ES6 æ”¯æŒäºŒè¿›åˆ¶å’Œå…«è¿›åˆ¶çš„å­—é¢é‡ï¼Œé€šè¿‡åœ¨æ•°å­—å‰é¢æ·»åŠ  0o æˆ–è€…0O å³å¯å°†å…¶è½¬æ¢ä¸ºäºŒè¿›åˆ¶å€¼ï¼š
 let oValue = 0o10;
 console.log(oValue); // 8
  
-let bValue = 0b10; // ¶þ½øÖÆÊ¹ÓÃ `0b` »òÕß `0B`
+let bValue = 0b10; // äºŒè¿›åˆ¶ä½¿ç”¨ `0b` æˆ–è€… `0B`
 console.log(bValue); // 2
-7. ¶ÔÏóºÍÊý×é½â¹¹
-½â¹¹¿ÉÒÔ±ÜÃâÔÚ¶ÔÏó¸³ÖµÊ±²úÉúÖÐ¼ä±äÁ¿£º
+7. å¯¹è±¡å’Œæ•°ç»„è§£æž„
+è§£æž„å¯ä»¥é¿å…åœ¨å¯¹è±¡èµ‹å€¼æ—¶äº§ç”Ÿä¸­é—´å˜é‡ï¼š
 function foo() {
   return [1,2,3];
 }
@@ -139,8 +141,8 @@ function bar() {
 }
 let {x: x, y: y, z: z} = bar();
 console.log(x, y, z); // 4 5 6
-8. ¶ÔÏó³¬Àà
-ES6 ÔÊÐíÔÚ¶ÔÏóÖÐÊ¹ÓÃ super ·½·¨£º
+8. å¯¹è±¡è¶…ç±»
+ES6 å…è®¸åœ¨å¯¹è±¡ä¸­ä½¿ç”¨ super æ–¹æ³•ï¼š
 var parent = {
   foo() {
     console.log("Hello from the Parent");
@@ -157,50 +159,50 @@ var child = {
 Object.setPrototypeOf(child, parent);
 child.foo(); // Hello from the Parent
              // Hello from the Child
-9. Ä£°åÓï·¨ºÍ·Ö¸ô·û
-ES6 ÖÐÓÐÒ»ÖÖÊ®·Ö¼ò½àµÄ·½·¨×é×°Ò»¶Ñ×Ö·û´®ºÍ±äÁ¿¡£
-${ ... } ÓÃÀ´äÖÈ¾Ò»¸ö±äÁ¿
-` ×÷Îª·Ö¸ô·û
+9. æ¨¡æ¿è¯­æ³•å’Œåˆ†éš”ç¬¦
+ES6 ä¸­æœ‰ä¸€ç§ååˆ†ç®€æ´çš„æ–¹æ³•ç»„è£…ä¸€å †å­—ç¬¦ä¸²å’Œå˜é‡ã€‚
+${ ... } ç”¨æ¥æ¸²æŸ“ä¸€ä¸ªå˜é‡
+` ä½œä¸ºåˆ†éš”ç¬¦
 let user = 'Barret';
 console.log(`Hi ${user}!`); // Hi Barret!
 10. for...of VS for...in
-for...of ÓÃÓÚ±éÀúÒ»¸öµü´úÆ÷£¬ÈçÊý×é£º
+for...of ç”¨äºŽéåŽ†ä¸€ä¸ªè¿­ä»£å™¨ï¼Œå¦‚æ•°ç»„ï¼š
 let nicknames = ['di', 'boo', 'punkeye'];
 nicknames.size = 3;
 for (let nickname of nicknames) {
   console.log(nickname);
 }
-// ½á¹û: di, boo, punkeye
-for...in ÓÃÀ´±éÀú¶ÔÏóÖÐµÄÊôÐÔ£º
+// ç»“æžœ: di, boo, punkeye
+for...in ç”¨æ¥éåŽ†å¯¹è±¡ä¸­çš„å±žæ€§ï¼š
 let nicknames = ['di', 'boo', 'punkeye'];
 nicknames.size = 3;
 for (let nickname in nicknames) {
   console.log(nickname);
 }
 Result: 0, 1, 2, size
-11. Map ºÍ WeakMap
-ES6 ÖÐÁ½ÖÖÐÂµÄÊý¾Ý½á¹¹¼¯£ºMap ºÍ WeakMap¡£ÊÂÊµÉÏÃ¿¸ö¶ÔÏó¶¼¿ÉÒÔ¿´×÷ÊÇÒ»¸ö Map¡£
-Ò»¸ö¶ÔÏóÓÉ¶à¸ö key-val ¶Ô¹¹³É£¬ÔÚ Map ÖÐ£¬ÈÎºÎÀàÐÍ¶¼¿ÉÒÔ×÷Îª¶ÔÏóµÄ key£¬Èç£º
+11. Map å’Œ WeakMap
+ES6 ä¸­ä¸¤ç§æ–°çš„æ•°æ®ç»“æž„é›†ï¼šMap å’Œ WeakMapã€‚äº‹å®žä¸Šæ¯ä¸ªå¯¹è±¡éƒ½å¯ä»¥çœ‹ä½œæ˜¯ä¸€ä¸ª Mapã€‚
+ä¸€ä¸ªå¯¹è±¡ç”±å¤šä¸ª key-val å¯¹æž„æˆï¼Œåœ¨ Map ä¸­ï¼Œä»»ä½•ç±»åž‹éƒ½å¯ä»¥ä½œä¸ºå¯¹è±¡çš„ keyï¼Œå¦‚ï¼š
 var myMap = new Map();
  
 var keyString = "a string",
     keyObj = {},
     keyFunc = function () {};
  
-// ÉèÖÃÖµ
-myMap.set(keyString, "value Óë 'a string' ¹ØÁª");
-myMap.set(keyObj, "value Óë keyObj ¹ØÁª");
-myMap.set(keyFunc, "value Óë keyFunc ¹ØÁª");
+// è®¾ç½®å€¼
+myMap.set(keyString, "value ä¸Ž 'a string' å…³è”");
+myMap.set(keyObj, "value ä¸Ž keyObj å…³è”");
+myMap.set(keyFunc, "value ä¸Ž keyFunc å…³è”");
  
 myMap.size; // 3
  
-// »ñÈ¡Öµ
-myMap.get(keyString);    // "value Óë 'a string' ¹ØÁª"
-myMap.get(keyObj);       // "value Óë keyObj ¹ØÁª"
-myMap.get(keyFunc);      // "value Óë keyFunc ¹ØÁª"
+// èŽ·å–å€¼
+myMap.get(keyString);    // "value ä¸Ž 'a string' å…³è”"
+myMap.get(keyObj);       // "value ä¸Ž keyObj å…³è”"
+myMap.get(keyFunc);      // "value ä¸Ž keyFunc å…³è”"
 WeakMap
-WeakMap ¾ÍÊÇÒ»¸ö Map£¬Ö»²»¹ýËüµÄËùÓÐ key ¶¼ÊÇÈõÒýÓÃ£¬ÒâË¼¾ÍÊÇ WeakMap ÖÐµÄ¶«Î÷À¬»ø»ØÊÕÊ±²»¿¼ÂÇ£¬Ê¹ÓÃËü²»ÓÃµ£ÐÄÄÚ´æÐ¹Â©ÎÊÌâ¡£
-ÁíÒ»¸öÐèÒª×¢ÒâµÄµãÊÇ£¬WeakMap µÄËùÓÐ key ±ØÐëÊÇ¶ÔÏó¡£ËüÖ»ÓÐËÄ¸ö·½·¨ delete(key),has(key),get(key) ºÍset(key, val)£º
+WeakMap å°±æ˜¯ä¸€ä¸ª Mapï¼Œåªä¸è¿‡å®ƒçš„æ‰€æœ‰ key éƒ½æ˜¯å¼±å¼•ç”¨ï¼Œæ„æ€å°±æ˜¯ WeakMap ä¸­çš„ä¸œè¥¿åžƒåœ¾å›žæ”¶æ—¶ä¸è€ƒè™‘ï¼Œä½¿ç”¨å®ƒä¸ç”¨æ‹…å¿ƒå†…å­˜æ³„æ¼é—®é¢˜ã€‚
+å¦ä¸€ä¸ªéœ€è¦æ³¨æ„çš„ç‚¹æ˜¯ï¼ŒWeakMap çš„æ‰€æœ‰ key å¿…é¡»æ˜¯å¯¹è±¡ã€‚å®ƒåªæœ‰å››ä¸ªæ–¹æ³• delete(key),has(key),get(key) å’Œset(key, val)ï¼š
 let w = new WeakMap();
 w.set('a', 'b'); 
 // Uncaught TypeError: Invalid value used as weak map key
@@ -218,14 +220,14 @@ w.get(o3); // undefined, because that is the set value
 w.has(o1); // true
 w.delete(o1);
 w.has(o1); // false
-12. Set ºÍ WeakSet
-Set ¶ÔÏóÊÇÒ»×é²»ÖØ¸´µÄÖµ£¬ÖØ¸´µÄÖµ½«±»ºöÂÔ£¬ÖµÀàÐÍ¿ÉÒÔÊÇÔ­Ê¼ÀàÐÍºÍÒýÓÃÀàÐÍ£º
+12. Set å’Œ WeakSet
+Set å¯¹è±¡æ˜¯ä¸€ç»„ä¸é‡å¤çš„å€¼ï¼Œé‡å¤çš„å€¼å°†è¢«å¿½ç•¥ï¼Œå€¼ç±»åž‹å¯ä»¥æ˜¯åŽŸå§‹ç±»åž‹å’Œå¼•ç”¨ç±»åž‹ï¼š
 let mySet = new Set([1, 1, 2, 2, 3, 3]);
 mySet.size; // 3
 mySet.has(1); // true
 mySet.add('strings');
 mySet.add({ a: 1, b:2 });
-¿ÉÒÔÍ¨¹ý forEach ºÍ for...of À´±éÀú Set ¶ÔÏó£º
+å¯ä»¥é€šè¿‡ forEach å’Œ for...of æ¥éåŽ† Set å¯¹è±¡ï¼š
 mySet.forEach((item) => {
   console.log(item);
     // 1
@@ -243,9 +245,9 @@ for (let value of mySet) {
     // 'strings'
     // Object { a: 1, b: 2 }
 }
-Set Í¬ÑùÓÐ delete() ºÍ clear() ·½·¨¡£
+Set åŒæ ·æœ‰ delete() å’Œ clear() æ–¹æ³•ã€‚
 WeakSet
-ÀàËÆÓÚ WeakMap£¬WeakSet ¶ÔÏó¿ÉÒÔÈÃÄãÔÚÒ»¸ö¼¯ºÏÖÐ±£´æ¶ÔÏóµÄÈõÒýÓÃ£¬ÔÚ WeakSet ÖÐµÄ¶ÔÏóÖ»ÔÊÐí³öÏÖÒ»´Î£º
+ç±»ä¼¼äºŽ WeakMapï¼ŒWeakSet å¯¹è±¡å¯ä»¥è®©ä½ åœ¨ä¸€ä¸ªé›†åˆä¸­ä¿å­˜å¯¹è±¡çš„å¼±å¼•ç”¨ï¼Œåœ¨ WeakSet ä¸­çš„å¯¹è±¡åªå…è®¸å‡ºçŽ°ä¸€æ¬¡ï¼š
 var ws = new WeakSet();
 var obj = {};
 var foo = {};
@@ -254,13 +256,13 @@ ws.add(window);
 ws.add(obj);
  
 ws.has(window); // true
-ws.has(foo);    // false, foo Ã»ÓÐÌí¼Ó³É¹¦
+ws.has(foo);    // false, foo æ²¡æœ‰æ·»åŠ æˆåŠŸ
  
-ws.delete(window); // ´Ó½áºÏÖÐÉ¾³ý window ¶ÔÏó
-ws.has(window);    // false, window ¶ÔÏóÒÑ¾­±»É¾³ý
-13. Àà
-ES6 ÖÐÓÐ class Óï·¨¡£ÖµµÃ×¢ÒâÊÇ£¬ÕâÀïµÄ class ²»ÊÇÐÂµÄ¶ÔÏó¼Ì³ÐÄ£ÐÍ£¬ËüÖ»ÊÇÔ­ÐÍÁ´µÄÓï·¨ÌÇ±íÏÖÐÎÊ½¡£
-º¯ÊýÖÐÊ¹ÓÃ static ¹Ø¼ü´Ê¶¨Òå¹¹Ôìº¯ÊýµÄµÄ·½·¨ºÍÊôÐÔ£º
+ws.delete(window); // ä»Žç»“åˆä¸­åˆ é™¤ window å¯¹è±¡
+ws.has(window);    // false, window å¯¹è±¡å·²ç»è¢«åˆ é™¤
+13. ç±»
+ES6 ä¸­æœ‰ class è¯­æ³•ã€‚å€¼å¾—æ³¨æ„æ˜¯ï¼Œè¿™é‡Œçš„ class ä¸æ˜¯æ–°çš„å¯¹è±¡ç»§æ‰¿æ¨¡åž‹ï¼Œå®ƒåªæ˜¯åŽŸåž‹é“¾çš„è¯­æ³•ç³–è¡¨çŽ°å½¢å¼ã€‚
+å‡½æ•°ä¸­ä½¿ç”¨ static å…³é”®è¯å®šä¹‰æž„é€ å‡½æ•°çš„çš„æ–¹æ³•å’Œå±žæ€§ï¼š
 class Task {
   constructor() {
     console.log("task instantiated!");
@@ -279,7 +281,7 @@ console.log(typeof Task); // function
 let task = new Task(); // "task instantiated!"
 task.showId(); // 23
 Task.loadAll(); // "Loading all tasks.."
-ÀàÖÐµÄ¼Ì³ÐºÍ³¬¼¯£º
+ç±»ä¸­çš„ç»§æ‰¿å’Œè¶…é›†ï¼š
 class Car {
   constructor() {
     console.log("Creating a new car");
@@ -296,29 +298,29 @@ class Porsche extends Car {
 let c = new Porsche();
 // Creating a new car
 // Creating Porsche
-extends ÔÊÐíÒ»¸ö×ÓÀà¼Ì³Ð¸¸Àà£¬ÐèÒª×¢ÒâµÄÊÇ£¬×ÓÀàµÄconstructor º¯ÊýÖÐÐèÒªÖ´ÐÐ super() º¯Êý¡£
-µ±È»£¬ÄãÒ²¿ÉÒÔÔÚ×ÓÀà·½·¨ÖÐµ÷ÓÃ¸¸ÀàµÄ·½·¨£¬Èçsuper.parentMethodName()¡£
-ÔÚ ÕâÀï ÔÄ¶Á¸ü¶à¹ØÓÚÀàµÄ½éÉÜ¡£
-ÓÐ¼¸µãÖµµÃ×¢ÒâµÄÊÇ£º
-ÀàµÄÉùÃ÷²»»áÌáÉý£¨hoisting)£¬Èç¹ûÄãÒªÊ¹ÓÃÄ³¸ö Class£¬ÄÇÄã±ØÐëÔÚÊ¹ÓÃÖ®Ç°¶¨ÒåËü£¬·ñÔò»áÅ×³öÒ»¸ö ReferenceError µÄ´íÎó
-ÔÚÀàÖÐ¶¨Òåº¯Êý²»ÐèÒªÊ¹ÓÃ function ¹Ø¼ü´Ê
+extends å…è®¸ä¸€ä¸ªå­ç±»ç»§æ‰¿çˆ¶ç±»ï¼Œéœ€è¦æ³¨æ„çš„æ˜¯ï¼Œå­ç±»çš„constructor å‡½æ•°ä¸­éœ€è¦æ‰§è¡Œ super() å‡½æ•°ã€‚
+å½“ç„¶ï¼Œä½ ä¹Ÿå¯ä»¥åœ¨å­ç±»æ–¹æ³•ä¸­è°ƒç”¨çˆ¶ç±»çš„æ–¹æ³•ï¼Œå¦‚super.parentMethodName()ã€‚
+åœ¨ è¿™é‡Œ é˜…è¯»æ›´å¤šå…³äºŽç±»çš„ä»‹ç»ã€‚
+æœ‰å‡ ç‚¹å€¼å¾—æ³¨æ„çš„æ˜¯ï¼š
+ç±»çš„å£°æ˜Žä¸ä¼šæå‡ï¼ˆhoisting)ï¼Œå¦‚æžœä½ è¦ä½¿ç”¨æŸä¸ª Classï¼Œé‚£ä½ å¿…é¡»åœ¨ä½¿ç”¨ä¹‹å‰å®šä¹‰å®ƒï¼Œå¦åˆ™ä¼šæŠ›å‡ºä¸€ä¸ª ReferenceError çš„é”™è¯¯
+åœ¨ç±»ä¸­å®šä¹‰å‡½æ•°ä¸éœ€è¦ä½¿ç”¨ function å…³é”®è¯
 14. Symbol
-Symbol ÊÇÒ»ÖÖÐÂµÄÊý¾ÝÀàÐÍ£¬ËüµÄÖµÊÇÎ¨Ò»µÄ£¬²»¿É±äµÄ¡£ES6 ÖÐÌá³ö symbol µÄÄ¿µÄÊÇÎªÁËÉú³ÉÒ»¸öÎ¨Ò»µÄ±êÊ¶·û£¬²»¹ýÄã·ÃÎÊ²»µ½Õâ¸ö±êÊ¶·û£º
+Symbol æ˜¯ä¸€ç§æ–°çš„æ•°æ®ç±»åž‹ï¼Œå®ƒçš„å€¼æ˜¯å”¯ä¸€çš„ï¼Œä¸å¯å˜çš„ã€‚ES6 ä¸­æå‡º symbol çš„ç›®çš„æ˜¯ä¸ºäº†ç”Ÿæˆä¸€ä¸ªå”¯ä¸€çš„æ ‡è¯†ç¬¦ï¼Œä¸è¿‡ä½ è®¿é—®ä¸åˆ°è¿™ä¸ªæ ‡è¯†ç¬¦ï¼š
 var sym = Symbol( "some optional description" );
 console.log(typeof sym); // symbol
-×¢Òâ£¬ÕâÀï Symbol Ç°Ãæ²»ÄÜÊ¹ÓÃ new ²Ù×÷·û¡£
-Èç¹ûËü±»ÓÃ×÷Ò»¸ö¶ÔÏóµÄÊôÐÔ£¬ÄÇÃ´Õâ¸öÊôÐÔ»áÊÇ²»¿ÉÃ¶¾ÙµÄ£º
+æ³¨æ„ï¼Œè¿™é‡Œ Symbol å‰é¢ä¸èƒ½ä½¿ç”¨ new æ“ä½œç¬¦ã€‚
+å¦‚æžœå®ƒè¢«ç”¨ä½œä¸€ä¸ªå¯¹è±¡çš„å±žæ€§ï¼Œé‚£ä¹ˆè¿™ä¸ªå±žæ€§ä¼šæ˜¯ä¸å¯æžšä¸¾çš„ï¼š
 var o = {
     val: 10,
     [ Symbol("random") ]: "I'm a symbol",
 };
  
 console.log(Object.getOwnPropertyNames(o)); // val
-Èç¹ûÒª»ñÈ¡¶ÔÏó symbol ÊôÐÔ£¬ÐèÒªÊ¹ÓÃObject.getOwnPropertySymbols(o)¡£
-15. µü´úÆ÷£¨Iterators£©
-µü´úÆ÷ÔÊÐíÃ¿´Î·ÃÎÊÊý¾Ý¼¯ºÏµÄÒ»¸öÔªËØ£¬µ±Ö¸ÕëÖ¸ÏòÊý¾Ý¼¯ºÏ×îºóÒ»¸öÔªËØÊÇ£¬µü´úÆ÷±ã»áÍË³ö¡£ËüÌá¹©ÁË next() º¯ÊýÀ´±éÀúÒ»¸öÐòÁÐ£¬Õâ¸ö·½·¨·µ»ØÒ»¸ö°üº¬ done ºÍ value ÊôÐÔµÄ¶ÔÏó¡£
-ES6 ÖÐ¿ÉÒÔÍ¨¹ý Symbol.iterator ¸ø¶ÔÏóÉèÖÃÄ¬ÈÏµÄ±éÀúÆ÷£¬ÎÞÂÛÊ²Ã´Ê±ºò¶ÔÏóÐèÒª±»±éÀú£¬Ö´ÐÐËüµÄ @@iterator ·½·¨±ã¿ÉÒÔ·µ»ØÒ»¸öÓÃÓÚ»ñÈ¡ÖµµÄµü´úÆ÷¡£
-Êý×éÄ¬ÈÏ¾ÍÊÇÒ»¸öµü´úÆ÷£º
+å¦‚æžœè¦èŽ·å–å¯¹è±¡ symbol å±žæ€§ï¼Œéœ€è¦ä½¿ç”¨Object.getOwnPropertySymbols(o)ã€‚
+15. è¿­ä»£å™¨ï¼ˆIteratorsï¼‰
+è¿­ä»£å™¨å…è®¸æ¯æ¬¡è®¿é—®æ•°æ®é›†åˆçš„ä¸€ä¸ªå…ƒç´ ï¼Œå½“æŒ‡é’ˆæŒ‡å‘æ•°æ®é›†åˆæœ€åŽä¸€ä¸ªå…ƒç´ æ˜¯ï¼Œè¿­ä»£å™¨ä¾¿ä¼šé€€å‡ºã€‚å®ƒæä¾›äº† next() å‡½æ•°æ¥éåŽ†ä¸€ä¸ªåºåˆ—ï¼Œè¿™ä¸ªæ–¹æ³•è¿”å›žä¸€ä¸ªåŒ…å« done å’Œ value å±žæ€§çš„å¯¹è±¡ã€‚
+ES6 ä¸­å¯ä»¥é€šè¿‡ Symbol.iterator ç»™å¯¹è±¡è®¾ç½®é»˜è®¤çš„éåŽ†å™¨ï¼Œæ— è®ºä»€ä¹ˆæ—¶å€™å¯¹è±¡éœ€è¦è¢«éåŽ†ï¼Œæ‰§è¡Œå®ƒçš„ @@iterator æ–¹æ³•ä¾¿å¯ä»¥è¿”å›žä¸€ä¸ªç”¨äºŽèŽ·å–å€¼çš„è¿­ä»£å™¨ã€‚
+æ•°ç»„é»˜è®¤å°±æ˜¯ä¸€ä¸ªè¿­ä»£å™¨ï¼š
 var arr = [11,12,13];
 var itr = arr[Symbol.iterator]();
  
@@ -327,10 +329,10 @@ itr.next(); // { value: 12, done: false }
 itr.next(); // { value: 13, done: false }
  
 itr.next(); // { value: undefined, done: true }
-Äã¿ÉÒÔÍ¨¹ý [Symbol.iterator]() ×Ô¶¨ÒåÒ»¸ö¶ÔÏóµÄµü´úÆ÷¡£
+ä½ å¯ä»¥é€šè¿‡ [Symbol.iterator]() è‡ªå®šä¹‰ä¸€ä¸ªå¯¹è±¡çš„è¿­ä»£å™¨ã€‚
 16. Generators
-Generator º¯ÊýÊÇ ES6 µÄÐÂÌØÐÔ£¬ËüÔÊÐíÒ»¸öº¯Êý·µ»ØµÄ¿É±éÀú¶ÔÏóÉú³É¶à¸öÖµ¡£
-ÔÚÊ¹ÓÃÖÐÄã»á¿´µ½ * Óï·¨ºÍÒ»¸öÐÂµÄ¹Ø¼ü´Ê yield:
+Generator å‡½æ•°æ˜¯ ES6 çš„æ–°ç‰¹æ€§ï¼Œå®ƒå…è®¸ä¸€ä¸ªå‡½æ•°è¿”å›žçš„å¯éåŽ†å¯¹è±¡ç”Ÿæˆå¤šä¸ªå€¼ã€‚
+åœ¨ä½¿ç”¨ä¸­ä½ ä¼šçœ‹åˆ° * è¯­æ³•å’Œä¸€ä¸ªæ–°çš„å…³é”®è¯ yield:
 function *infiniteNumbers() {
   var n = 1;
   while (true){
@@ -343,9 +345,9 @@ var numbers = infiniteNumbers(); // returns an iterable object
 numbers.next(); // { value: 1, done: false }
 numbers.next(); // { value: 2, done: false }
 numbers.next(); // { value: 3, done: false }
-Ã¿´ÎÖ´ÐÐ yield Ê±£¬·µ»ØµÄÖµ±äÎªµü´úÆ÷µÄÏÂÒ»¸öÖµ¡£
+æ¯æ¬¡æ‰§è¡Œ yield æ—¶ï¼Œè¿”å›žçš„å€¼å˜ä¸ºè¿­ä»£å™¨çš„ä¸‹ä¸€ä¸ªå€¼ã€‚
 17. Promises
-ES6 ¶Ô Promise ÓÐÁËÔ­ÉúµÄÖ§³Ö£¬Ò»¸ö Promise ÊÇÒ»¸öµÈ´ý±»Òì²½Ö´ÐÐµÄ¶ÔÏó£¬µ±ËüÖ´ÐÐÍê³Éºó£¬Æä×´Ì¬»á±ä³É resolved »òÕßrejected¡£
+ES6 å¯¹ Promise æœ‰äº†åŽŸç”Ÿçš„æ”¯æŒï¼Œä¸€ä¸ª Promise æ˜¯ä¸€ä¸ªç­‰å¾…è¢«å¼‚æ­¥æ‰§è¡Œçš„å¯¹è±¡ï¼Œå½“å®ƒæ‰§è¡Œå®ŒæˆåŽï¼Œå…¶çŠ¶æ€ä¼šå˜æˆ resolved æˆ–è€…rejectedã€‚
 var p = new Promise(function(resolve, reject) {  
   if (/* condition */) {
     // fulfilled successfully
@@ -355,9 +357,9 @@ var p = new Promise(function(resolve, reject) {
     reject(/* reason */);  
   }
 });
-Ã¿Ò»¸ö Promise ¶¼ÓÐÒ»¸ö .then ·½·¨£¬Õâ¸ö·½·¨½ÓÊÜÁ½¸ö²ÎÊý£¬µÚÒ»¸öÊÇ´¦Àí resolved ×´Ì¬µÄ»Øµ÷£¬Ò»¸öÊÇ´¦Àí rejected ×´Ì¬µÄ»Øµ÷£º
+æ¯ä¸€ä¸ª Promise éƒ½æœ‰ä¸€ä¸ª .then æ–¹æ³•ï¼Œè¿™ä¸ªæ–¹æ³•æŽ¥å—ä¸¤ä¸ªå‚æ•°ï¼Œç¬¬ä¸€ä¸ªæ˜¯å¤„ç† resolved çŠ¶æ€çš„å›žè°ƒï¼Œä¸€ä¸ªæ˜¯å¤„ç† rejected çŠ¶æ€çš„å›žè°ƒï¼š
 p.then((val) => console.log("Promise Resolved", val),
        (err) => console.log("Promise Rejected", err));
 
 
-Ô­ÎÄ£ºhttps://github.com/metagrover/ES6-for-humans
+åŽŸæ–‡ï¼šhttps://github.com/metagrover/ES6-for-humans
