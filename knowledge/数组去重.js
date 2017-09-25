@@ -8,7 +8,7 @@ for(var i=0;i<ary.length;i++){
         }
     }
 }
-alert(ary)；
+alert(ary);
 
 //变成对象，类名和值相同，删类名，即删掉这个对象。
 var a=[9,2,33,66,55,56,34,1,91,88];
@@ -21,7 +21,7 @@ for(var i=0;i<a.length;i++){
         }
     }
 }
-console.warn(a)
+console.warn(a);
 
 
 //indexOf
@@ -32,4 +32,4 @@ for(var i=0;i<ary.length;i++){
         ary1.push(ary[i]);
     }
 }
-alert(ary1)
+alert(ary1);
