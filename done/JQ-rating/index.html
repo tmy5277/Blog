@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<title>星级评分</title>
+
+<style>
+	body,ul,li{
+		padding: 0;
+		margin: 0;
+	}
+	li{
+		list-style-type:none; 
+	}
+	.rating{
+		width:130px;
+		height: 26px;
+		margin: 100px auto;
+	}
+	.rating-item{
+		float:left;
+		width: 26px;
+		height: 26px;
+		background: url(img/star-off.png) no-repeat;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	
+<ul class="rating" id="rating">
+	<li class="rating-item" title="差劲"></li>
+	<li class="rating-item" title="无聊"></li>
+	<li class="rating-item" title="一般"></li>
+	<li class="rating-item" title="不错"></li>
+	<li class="rating-item" title="很棒"></li>
+</ul>
+
+<script src='./jquery-1.8.3.min.js'></script>
+<script>
+	console.log($);
+</script>
+</body>
+</html>
