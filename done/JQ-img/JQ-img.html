@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>258</title>
+	<script type="text/javascript" src='./jquery-1.8.3.min.js'></script>
+	
+	
+</head>
+<body>
+<img class="img" src="" width="100" height="100">
+<input class="a" type="file">
+</body>
+	<script type="text/javascript">
+		$('.a').change(function(e) {
+   	 	var _URL = window.URL || window.webkitURL;
+    	var file, img;
+    	if ((file = this.files[0])) {
+       	 	img = new Image();
+       	 	img.onload = function() {
+        	    $('.img').attr('src', this.src);
+            console.log(this.width)
+        };
+        img.src = _URL.createObjectURL(file);
+    }
+})
+
+	</script>	
+</html>
