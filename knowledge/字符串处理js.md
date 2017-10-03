@@ -1,90 +1,118 @@
-JS×Ô´øº¯Êı
-concat
-½«Á½¸ö»ò¶à¸ö×Ö·ûµÄÎÄ±¾×éºÏÆğÀ´£¬·µ»ØÒ»¸öĞÂµÄ×Ö·û´®¡£
+JSè‡ªå¸¦å‡½æ•°  
+concat  
+å°†ä¸¤ä¸ªæˆ–å¤šä¸ªå­—ç¬¦çš„æ–‡æœ¬ç»„åˆèµ·æ¥ï¼Œè¿”å›ä¸€ä¸ªæ–°çš„å­—ç¬¦ä¸²ã€‚  
+<pre><code>
 var a = "hello";
 var b = ",world";
 var c = a.concat(b);
 alert(c);
 //c = "hello,world"
+</code></pre>  
 
-indexOf
-·µ»Ø×Ö·û´®ÖĞÒ»¸ö×Ó´®µÚÒ»´¦³öÏÖµÄË÷Òı£¨´Ó×óµ½ÓÒËÑË÷£©¡£Èç¹ûÃ»ÓĞÆ¥ÅäÏî£¬·µ»Ø -1 ¡£
+indexOf  
+è¿”å›å­—ç¬¦ä¸²ä¸­ä¸€ä¸ªå­ä¸²ç¬¬ä¸€å¤„å‡ºç°çš„ç´¢å¼•ï¼ˆä»å·¦åˆ°å³æœç´¢ï¼‰ã€‚å¦‚æœæ²¡æœ‰åŒ¹é…é¡¹ï¼Œè¿”å› -1 ã€‚  
+<pre><code>
 var index1 = a.indexOf("l");
 //index1 = 2
 var index2 = a.indexOf("l",3);
 //index2 = 3
+</code></pre>  
 
-charAt
-·µ»ØÖ¸¶¨Î»ÖÃµÄ×Ö·û¡£
+charAt  
+è¿”å›æŒ‡å®šä½ç½®çš„å­—ç¬¦ã€‚  
+<pre><code>
 var get_char = a.charAt(0);
 //get_char = "h"
+</code></pre>  
 
-lastIndexOf
-·µ»Ø×Ö·û´®ÖĞÒ»¸ö×Ó´®×îºóÒ»´¦³öÏÖµÄË÷Òı£¨´ÓÓÒµ½×óËÑË÷£©£¬Èç¹ûÃ»ÓĞÆ¥ÅäÏî£¬·µ»Ø -1 ¡£
+lastIndexOf  
+è¿”å›å­—ç¬¦ä¸²ä¸­ä¸€ä¸ªå­ä¸²æœ€åä¸€å¤„å‡ºç°çš„ç´¢å¼•ï¼ˆä»å³åˆ°å·¦æœç´¢ï¼‰ï¼Œå¦‚æœæ²¡æœ‰åŒ¹é…é¡¹ï¼Œè¿”å› -1 ã€‚  
+<pre><code>  
 var index1 = lastIndexOf('l');
 //index1 = 3
 var index2 = lastIndexOf('l',2)
 //index2 = 2
+</code></pre>  
 
-match
-¼ì²éÒ»¸ö×Ö·û´®Æ¥ÅäÒ»¸öÕıÔò±í´ïÊ½ÄÚÈİ£¬Èç¹ûÃ´ÓĞÆ¥Åä·µ»Ø null¡£
+match   
+æ£€æŸ¥ä¸€ä¸ªå­—ç¬¦ä¸²åŒ¹é…ä¸€ä¸ªæ­£åˆ™è¡¨è¾¾å¼å†…å®¹ï¼Œå¦‚æœä¹ˆæœ‰åŒ¹é…è¿”å› nullã€‚  
+<pre><code>
 var re = new RegExp(/^\w+$/);
 var is_alpha1 = a.match(re);
 //is_alpha1 = "hello"
 var is_alpha2 = b.match(re);
 //is_alpha2 = null
+</code></pre>  
 
-substring
-·µ»Ø×Ö·û´®µÄÒ»¸ö×Ó´®£¬´«Èë²ÎÊıÊÇÆğÊ¼Î»ÖÃºÍ½áÊøÎ»ÖÃ¡£
+substring  
+è¿”å›å­—ç¬¦ä¸²çš„ä¸€ä¸ªå­ä¸²ï¼Œä¼ å…¥å‚æ•°æ˜¯èµ·å§‹ä½ç½®å’Œç»“æŸä½ç½®ã€‚  
+<pre><code>
 var sub_string1 = a.substring(1);
 //sub_string1 = "ello"
 var sub_string2 = a.substring(1,4);
 //sub_string2 = "ell"
+</code> </pre> 
 
-substr
-·µ»Ø×Ö·û´®µÄÒ»¸ö×Ó´®£¬´«Èë²ÎÊıÊÇÆğÊ¼Î»ÖÃºÍ³¤¶È
+substr  
+è¿”å›å­—ç¬¦ä¸²çš„ä¸€ä¸ªå­ä¸²ï¼Œä¼ å…¥å‚æ•°æ˜¯èµ·å§‹ä½ç½®å’Œé•¿åº¦  
+<pre><code>
 var sub_string1 = a.substr(1);
 //sub_string1 = "ello"
 var sub_string2 = a.substr(1,4);
 //sub_string2 = "ello"
+</code></pre>
 
-replace
-ÓÃÀ´²éÕÒÆ¥ÅäÒ»¸öÕıÔò±í´ïÊ½µÄ×Ö·û´®£¬È»ºóÊ¹ÓÃĞÂ×Ö·û´®´úÌæÆ¥ÅäµÄ×Ö·û´®¡£
+replace  
+ç”¨æ¥æŸ¥æ‰¾åŒ¹é…ä¸€ä¸ªæ­£åˆ™è¡¨è¾¾å¼çš„å­—ç¬¦ä¸²ï¼Œç„¶åä½¿ç”¨æ–°å­—ç¬¦ä¸²ä»£æ›¿åŒ¹é…çš„å­—ç¬¦ä¸²ã€‚  
+<pre><code>
 var result1 = a.replace(re,"Hello");
 //result1 = "Hello"
 var result2 = b.replace(re,"Hello");
 //result2 = ",world"
+</code></pre>
 
-search
-Ö´ĞĞÒ»¸öÕıÔò±í´ïÊ½Æ¥Åä²éÕÒ¡£Èç¹û²éÕÒ³É¹¦£¬·µ»Ø×Ö·û´®ÖĞÆ¥ÅäµÄË÷ÒıÖµ¡£·ñÔò·µ»Ø -1 ¡£
+search  
+æ‰§è¡Œä¸€ä¸ªæ­£åˆ™è¡¨è¾¾å¼åŒ¹é…æŸ¥æ‰¾ã€‚å¦‚æœæŸ¥æ‰¾æˆåŠŸï¼Œè¿”å›å­—ç¬¦ä¸²ä¸­åŒ¹é…çš„ç´¢å¼•å€¼ã€‚å¦åˆ™è¿”å› -1 ã€‚  
+<pre><code>
 var index1 = a.search(re);
 //index1 = 0
 var index2 = b.search(re);
 //index2 = -1
+</code></pre>
 
-slice
-ÌáÈ¡×Ö·û´®µÄÒ»²¿·Ö£¬²¢·µ»ØÒ»¸öĞÂ×Ö·û´®£¨Óë substring ÏàÍ¬£©¡£
+slice  
+æå–å­—ç¬¦ä¸²çš„ä¸€éƒ¨åˆ†ï¼Œå¹¶è¿”å›ä¸€ä¸ªæ–°å­—ç¬¦ä¸²ï¼ˆä¸ substring ç›¸åŒï¼‰ã€‚  
+<pre><code>
 var sub_string1 = a.slice(1);
 //sub_string1 = "ello"
 var sub_string2 = a.slice(1,4);
 //sub_string2 = "ell"
+</code></pre> 
 
-split
-Í¨¹ı½«×Ö·û´®»®·Ö³É×Ó´®£¬½«Ò»¸ö×Ö·û´®×ö³ÉÒ»¸ö×Ö·û´®Êı×é¡£
+split  
+é€šè¿‡å°†å­—ç¬¦ä¸²åˆ’åˆ†æˆå­ä¸²ï¼Œå°†ä¸€ä¸ªå­—ç¬¦ä¸²åšæˆä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„ã€‚  
+<pre><code>
 var arr1 = a.split("");
 //arr1 = [h,e,l,l,o]
+</code></pre>
 
-length
-·µ»Ø×Ö·û´®µÄ³¤¶È£¬ËùÎ½×Ö·û´®µÄ³¤¶ÈÊÇÖ¸Æä°üº¬µÄ×Ö·ûµÄ¸öÊı¡£
+length  
+è¿”å›å­—ç¬¦ä¸²çš„é•¿åº¦ï¼Œæ‰€è°“å­—ç¬¦ä¸²çš„é•¿åº¦æ˜¯æŒ‡å…¶åŒ…å«çš„å­—ç¬¦çš„ä¸ªæ•°ã€‚  
+<pre><code>
 var len = a.length();
 //len = 5
+</code></pre>  
 
-toLowerCase
-½«Õû¸ö×Ö·û´®×ª³ÉĞ¡Ğ´×ÖÄ¸¡£
+toLowerCase  
+å°†æ•´ä¸ªå­—ç¬¦ä¸²è½¬æˆå°å†™å­—æ¯ã€‚  
+<pre><code>
 var lower_string = a.toLowerCase();
 //lower_string = "hello"
+</code></pre> 
 
-toUpperCase
-½«Õû¸ö×Ö·û´®×ª³É´óĞ´×ÖÄ¸¡£
+toUpperCase  
+å°†æ•´ä¸ªå­—ç¬¦ä¸²è½¬æˆå¤§å†™å­—æ¯ã€‚  
+<pre><code>
 var upper_string = a.toUpperCase();
 //upper_string = "HELLO"
+</code></pre>
