@@ -1,6 +1,8 @@
-##vueJSÊµÏÖĞÇ¼¶ÆÀ·Ö  
-Ö÷ÒªÔ­ÀíÊÇ¶¯Ì¬¸Ä±äÑùÊ½  
-
+##vueJSå®ç°æ˜Ÿçº§è¯„åˆ† Â 
+---  
+  
+ä¸»è¦åŸç†æ˜¯åŠ¨æ€æ”¹å˜æ ·å¼ Â 
+  
 <pre><code>
 <style>
   .star{
@@ -38,10 +40,10 @@
 <script>
   new Vue({
     el: '#app',
-  ¡¡data:{
+  ã€€data:{
     score: 4
   },
-   computed:{ //¼ÆËãÊôĞÔ
+   computed:{ //è®¡ç®—å±æ€§
     itemClasses(){
       let result = [];
       let score = Math.floor(this.score * 2 ) / 2;
