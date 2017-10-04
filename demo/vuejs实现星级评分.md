@@ -26,17 +26,17 @@
     background-image: url(img/off.png);
   }
 </style>
-
-
-
+ </code></pre>  
+  
+<pre>
 <div id="app">
   <ul class="star">
     <span v-for="(itemClass,index) in itemClasses" :class="itemClass" class="star-item" track-by="index"></span>
   </ul>
 </div>
+</pre>  
 
-
-
+<pre><code>
 <script>
   new Vue({
     el: '#app',
