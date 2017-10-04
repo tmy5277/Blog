@@ -36,7 +36,7 @@
 </div>
 </pre>  
 
-<pre><code>
+<code>
 <script>
   new Vue({
     el: '#app',
@@ -63,4 +63,4 @@
   }
 })
 </script>
- </code></pre>  
+ </code>
