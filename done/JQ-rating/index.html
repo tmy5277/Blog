@@ -38,7 +38,33 @@
 
 <script src='./jquery-1.8.3.min.js'></script>
 <script>
-	console.log($);
+	var num = 2;
+		$rating = $('#rating')
+		$item =	$rating.find('.rating-item');
+
+	//点亮函数
+	var lightOn = function(num){
+		$item.each(function(index){
+			if (index<num) {
+				$(this).css('background','url(img/star-on.png) no-repeat');
+			}
+			else{
+				$(this).css("background",'url(img/star-off.png) no-repeat');
+			}
+		});
+	}
+
+	lightOn(num);
+
+	$item.on('mouseover',function(){
+		lightOn($(this).index()+1);
+	}).on('click',function(){
+		num = $(this).index()+1;
+	});
+
+	$rating.on('mouseout',function(){
+		lightOn(num);
+	})
 </script>
 </body>
 </html>

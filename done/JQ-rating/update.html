@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<title>星级评分</title>
+
+<style>
+	body,ul,li{
+		padding: 0;
+		margin: 0;
+	}
+	li{
+		list-style-type:none; 
+	}
+	.rating{
+		width:130px;
+		height: 26px;
+		margin: 100px auto;
+	}
+	.rating-item{
+		float:left;
+		width: 26px;
+		height: 26px;
+		background: url(img/star-off.png) no-repeat;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	
+<ul class="rating" id="rating">
+	<li class="rating-item" title="差劲"></li>
+	<li class="rating-item" title="无聊"></li>
+	<li class="rating-item" title="一般"></li>
+	<li class="rating-item" title="不错"></li>
+	<li class="rating-item" title="很棒"></li>
+</ul>
+
+<ul class="rating" id="rating2">
+	<li class="rating-item" title="差劲"></li>
+	<li class="rating-item" title="无聊"></li>
+	<li class="rating-item" title="一般"></li>
+	<li class="rating-item" title="不错"></li>
+	<li class="rating-item" title="很棒"></li>
+</ul>
+
+<script src='./jquery-1.8.3.min.js'></script>
+<script>
+	var rating = (function(){
+
+		//点亮函数
+		var lightOn = function($item,num){
+			$item.each(function(index){
+				if (index<num) {
+					$(this).css('background','url(img/star-on.png) no-repeat');
+				}
+				else{
+					$(this).css("background",'url(img/star-off.png) no-repeat');
+				}
+			});
+		};
+		
+		var init = function(el,num){
+			var $rating = $(el),
+				$item =	$rating.find('.rating-item');
+
+			lightOn($item,num);
+
+			$rating.on('mouseover','.rating-item',function(){
+				lightOn($item,$(this).index()+1);
+			}).on('click','.rating-item',function(){
+				num = $(this).index()+1;
+			}).on('mouseout',function(){
+				lightOn($item,num);
+			});
+
+		};
+
+		$.fn.extend({
+			rating:function(num){
+				return this.each(function(){
+					init(this,num);
+				})
+			}
+		})
+
+		return {
+			init:init
+		};
+
+		
+	})();
+
+	// rating.init('#rating',2);
+	// rating.init('#rating2',3);
+	$('#rating').rating(2);
+	$('#rating2').rating(4);
+</script>
+</body>
+</html>
