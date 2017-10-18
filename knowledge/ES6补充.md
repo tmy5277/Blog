@@ -1,18 +1,20 @@
 =>是es6语法中的arrow function
-举例：
-(x) => x + 6
+举例：  
+
+    (x) => x + 6
 
 相当于
 
-<pre><code>function(x){
-    return x + 6;
-}</code></pre>   
+    function(x){
+    	return x + 6;
+    }  
    
    
-> > >是无符号移位运算符
+`> > >`是无符号移位运算符  
+
 举例：
 
-100>>>2
+    100>>>2
 
 相当于
 
